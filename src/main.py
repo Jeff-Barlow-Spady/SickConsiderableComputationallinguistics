@@ -55,11 +55,11 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 # MongoDB setup
-MONGO_DETAILS = "mongodb+srv://jeffbarlowspady:f5nlDfzrROpHOcAg@longtrees.j3weklg.mongodb.net/"
+MONGO_DETAILS = "mongodb+srv://jeffbarlowspady:f5nlDfzrROpHOcAg@longtrees.j3weklg.mongodb.net/?retryWrites=true&w=majority"
 client = AgnosticClient(MONGO_DETAILS)
 
 # Register models with the database
-client.register([SeedSource, Grower, SubSuccession, Tree])
+client['LongTrees']
 
 # Helper function to handle ServiceException
 def handle_service_exception(e: ServiceException):

@@ -94,14 +94,14 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 # MongoDB setup
-MONGO_DETAILS = "mongodb+srv://jeffbarlowspady:f5nlDfzrROpHOcAg@longtrees.j3weklg.mongodb.net/"
+MONGO_DETAILS = "mongodb+srv://jeffbarlowspady:f5nlDfzrROpHOcAg@longtrees.j3weklg.mongodb.net/?retryWrites=true&w=majority"
 client = AsyncIOMotorClient(MONGO_DETAILS)
 database = AsyncIOMotorDatabase(client, "LongTrees")
 
-seed_sources_collection = database.get_collection("SeedSources")
+seed_sources_collection = database.get_collection("SeedSource")
 growers_collection = database.get_collection("Growers")
-sub_successions_collection = database.get_collection("SubSuccessions")
-trees_collection = database.get_collection("TreeList")
+sub_successions_collection = database.get_collection("Sub-successuon")
+trees_collection = database.get_collection("Tree List")
 
 
 # Helper function to fetch a document by id

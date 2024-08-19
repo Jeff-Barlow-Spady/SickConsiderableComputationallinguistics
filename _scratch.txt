@@ -19,22 +19,3 @@
   File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/routing.py", line 754, in __call__
     await self.middleware_stack(scope, receive, send)
 
-  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/templating.py", line 40, in __init__
-    content = template.render(context)
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 939, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "templates/list_seed_sources.html", line 2, in top-level template code
-    <a href="{{ url_for('add_seed_source') }}" hx-get="{{ url_for('add_seed_source') }}" hx-target="#content" hx-swap="innerHTML">Add New Seed Source</a>
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/templating.py", line 134, in url_for
-    return request.url_for(name, **path_params)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/requests.py", line 187, in url_for
-    url_path = router.url_path_for(name, **path_params)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/routing.py", line 699, in url_path_for
-    raise NoMatchFound(name, path_params)
-starlette.routing.NoMatchFound: No route exists for name "add_seed_source" and params "".

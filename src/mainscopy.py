@@ -3,7 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from motorhead import Document, ServiceException
-from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
+from motor.motor_asyncio import AsyncIOMotorClient
 from typing import List, Optional
 from datetime import date
 
@@ -54,14 +54,14 @@ class Tree(Document):
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="~/templates")
 
 # MongoDB setup
 MONGO_DETAILS = "mongodb+srv://jeffbarlowspady:f5nlDfzrROpHOcAg@longtrees.j3weklg.mongodb.net/"
 client = AsyncIOMotorClient(MONGO_DETAILS)
-client['LongTrees']
-# Register models with the database
-client.register([SeedSource, Grower, SubSuccession, Tree])
+database = client(['LongTrees']['SeedSource']['Sub-Succession']['Tree List'])
+# Register models with the database 
+#database.register(['SeedSource', 'Grower', 'Sub-Succession', 'Tree List'])
 
 # Helper function to handle ServiceException
 def handle_service_exception(e: ServiceException):

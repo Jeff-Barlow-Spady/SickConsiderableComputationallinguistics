@@ -1,1 +1,40 @@
-export MONGODB_URL="mongodb+srv://jeffbarlowspady:f5nlDfzrROpHOcAg@longtrees.j3weklg.mongodb.net/"
+
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/routing.py", line 754, in __call__
+    await self.middleware_stack(scope, receive, send)
+
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/templating.py", line 40, in __init__
+    content = template.render(context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "templates/list_seed_sources.html", line 2, in top-level template code
+    <a href="{{ url_for('add_seed_source') }}" hx-get="{{ url_for('add_seed_source') }}" hx-target="#content" hx-swap="innerHTML">Add New Seed Source</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/templating.py", line 134, in url_for
+    return request.url_for(name, **path_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/requests.py", line 187, in url_for
+    url_path = router.url_path_for(name, **path_params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jbarlowspady/SickConsiderableComputationallinguistics/.venv/lib/python3.11/site-packages/starlette/routing.py", line 699, in url_path_for
+    raise NoMatchFound(name, path_params)
+starlette.routing.NoMatchFound: No route exists for name "add_seed_source" and params "".

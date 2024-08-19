@@ -1,0 +1,57 @@
+[{
+  "_id": "ObjectId",
+  "bsonType": "object",
+  "required": [
+    "name",
+    "contact_info",
+    "joined_at",
+    "geographic_coordinates"
+  ],
+  "properties": {
+    "name": {
+      "bsonType": "string",
+      "description": "Name of the grower"
+    },
+    "contact_info": {
+      "bsonType": "string",
+      "description": "Contact information of the grower"
+    },
+    "joined_at": {
+      "bsonType": "date",
+      "description": "Date the grower joined the project"
+    },
+    "address": {
+      "bsonType": "string",
+      "description": "Address of the grower"
+    },
+    "geographic_coordinates": {
+      "bsonType": "object",
+      "properties": {
+        "latitude": {
+          "bsonType": "double",
+          "description": "Latitude of the grower's location"
+        },
+        "longitude": {
+          "bsonType": "double",
+          "description": "Longitude of the grower's location"
+        }
+      }
+    },
+    "group_membership": {
+      "bsonType": "string",
+      "description": "Group or organization the grower belongs to"
+    },
+    "assigned_sub_successions": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "sub_succession_id": {
+            "bsonType": "objectId",
+            "description": "The ID of the assigned sub-succession"
+          }
+        }
+      }
+    }
+  }
+}]

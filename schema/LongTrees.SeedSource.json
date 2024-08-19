@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "66c289972ee32099b6847666"
+  },
+  "bsonType": "object",
+  "required": [
+    "succession_number",
+    "description",
+    "germination_rate",
+    "quantity",
+    "date_added"
+  ],
+  "properties": {
+    "succession_number": {
+      "bsonType": "string",
+      "description": "Unique number or code for the seed batch"
+    },
+    "description": {
+      "bsonType": "string",
+      "description": "Description of the seed batch"
+    },
+    "germination_rate": {
+      "bsonType": "double",
+      "description": "The germination rate of the seeds"
+    },
+    "quantity": {
+      "bsonType": "int",
+      "description": "Total number of seeds in the batch"
+    },
+    "scarification_instructions": {
+      "bsonType": "string",
+      "description": "Instructions for scarifying the seeds"
+    },
+    "stratification_instructions": {
+      "bsonType": "string",
+      "description": "Instructions for stratifying the seeds"
+    },
+    "date_added": {
+      "bsonType": "date",
+      "description": "Date when the seed source was added"
+    },
+    "seeds_issued": {
+      "bsonType": "int",
+      "description": "Number of seeds issued from this batch"
+    },
+    "origin": {
+      "bsonType": "object",
+      "properties": {
+        "geographic_location": {
+          "bsonType": "string",
+          "description": "The geographic location where the seeds originated"
+        },
+        "supplier": {
+          "bsonType": "string",
+          "description": "The supplier of the seeds"
+        }
+      }
+    },
+    "viability_duration": {
+      "bsonType": "string",
+      "description": "Expected viability duration of the seeds"
+    },
+    "distribution_log": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "sub_succession_id": {
+            "bsonType": "objectId",
+            "description": "The ID of the sub-succession"
+          },
+          "seeds_issued": {
+            "bsonType": "int",
+            "description": "Number of seeds issued"
+          },
+          "issued_at": {
+            "bsonType": "date",
+            "description": "Date when the seeds were issued"
+          }
+        }
+      }
+    }
+  }
+}]

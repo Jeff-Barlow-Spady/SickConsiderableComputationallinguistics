@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "66c2992e50ddf541b19631bc"
+  },
+  "bsonType": "object",
+  "required": [
+    "sub_succession_id",
+    "species",
+    "growth_stage",
+    "planted_at"
+  ],
+  "properties": {
+    "sub_succession_id": {
+      "bsonType": "objectId",
+      "description": "The ID of the sub-succession this tree belongs to"
+    },
+    "species": {
+      "bsonType": "string",
+      "description": "Species of the tree"
+    },
+    "growth_stage": {
+      "bsonType": "string",
+      "description": "Current growth stage of the tree"
+    },
+    "planted_at": {
+      "bsonType": "date",
+      "description": "Date when the tree was planted"
+    },
+    "height": {
+      "bsonType": "double",
+      "description": "Current height of the tree"
+    },
+    "health_status": {
+      "bsonType": "string",
+      "description": "Current health status of the tree"
+    },
+    "yield_data": {
+      "bsonType": "string",
+      "description": "Yield or output data for the tree"
+    },
+    "environmental_monitoring": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "timestamp": {
+            "bsonType": "date",
+            "description": "Timestamp for the environmental data"
+          },
+          "soil_moisture": {
+            "bsonType": "string",
+            "description": "Soil moisture level"
+          },
+          "light_exposure": {
+            "bsonType": "string",
+            "description": "Light exposure conditions"
+          },
+          "temperature": {
+            "bsonType": "double",
+            "description": "Temperature at the time of monitoring"
+          }
+        }
+      }
+    },
+    "notes": {
+      "bsonType": "string",
+      "description": "Additional observations or notes about the tree"
+    }
+  }
+}]

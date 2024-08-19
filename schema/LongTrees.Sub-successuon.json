@@ -1,0 +1,59 @@
+[{
+  "_id": {
+    "$oid": "66c2991a50ddf541b19631b9"
+  },
+  "bsonType": "object",
+  "required": [
+    "sub_succession_number",
+    "seed_source_id",
+    "grower_id",
+    "created_at",
+    "status"
+  ],
+  "properties": {
+    "sub_succession_number": {
+      "bsonType": "string",
+      "description": "Unique number for the sub-succession"
+    },
+    "seed_source_id": {
+      "bsonType": "objectId",
+      "description": "The ID of the seed source"
+    },
+    "grower_id": {
+      "bsonType": "objectId",
+      "description": "The ID of the grower responsible for this sub-succession"
+    },
+    "created_at": {
+      "bsonType": "date",
+      "description": "Date when the sub-succession was created"
+    },
+    "status": {
+      "bsonType": "string",
+      "description": "Current status of the sub-succession"
+    },
+    "merged_into": {
+      "bsonType": "objectId",
+      "description": "The ID of the sub-succession this one was merged into"
+    },
+    "parent_sub_succession": {
+      "bsonType": "objectId",
+      "description": "The ID of the parent sub-succession"
+    },
+    "expected_outcome": {
+      "bsonType": "string",
+      "description": "Expected outcome or goal for this sub-succession"
+    },
+    "tree_list": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "tree_id": {
+            "bsonType": "objectId",
+            "description": "The ID of a tree associated with this sub-succession"
+          }
+        }
+      }
+    }
+  }
+}]

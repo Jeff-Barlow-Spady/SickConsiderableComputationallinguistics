@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Request, Form
+from fastapi.routing import BaseRoute
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles

@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from motorhead import Document, Motorhead, ServiceException
+from motorhead import Document, AgnosticClient , ServiceException
 from typing import List, Optional
 from datetime import date
 
@@ -56,7 +56,7 @@ templates = Jinja2Templates(directory="templates")
 
 # MongoDB setup
 MONGO_DETAILS = "mongodb+srv://jeffbarlowspady:f5nlDfzrROpHOcAg@longtrees.j3weklg.mongodb.net/"
-client = Motorhead(MONGO_DETAILS)
+client = AgnosticClient(MONGO_DETAILS)
 
 # Register models with the database
 client.register([SeedSource, Grower, SubSuccession, Tree])

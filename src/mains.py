@@ -96,7 +96,7 @@ templates = Jinja2Templates(directory="templates")
 # MongoDB setup
 MONGO_DETAILS = "mongodb+srv://jeffbarlowspady:f5nlDfzrROpHOcAg@longtrees.j3weklg.mongodb.net/"
 client = AsyncIOMotorClient(MONGO_DETAILS)
-database = AsyncIOMotorDatabase(client, SeedSource)
+database = AsyncIOMotorDatabase(client, "LongTrees")
 
 seed_sources_collection = database.get_collection("SeedSources")
 growers_collection = database.get_collection("Growers")

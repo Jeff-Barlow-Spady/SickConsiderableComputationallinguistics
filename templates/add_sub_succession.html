@@ -1,0 +1,23 @@
+<h1>Add Sub Succession</h1>
+<form hx-post="{{ url_for('add_sub_succession') }}" hx-target="#sub-succession-list" hx-swap="beforeend">
+    <label for="sub_succession_number">Sub Succession Number:</label><br>
+    <input type="text" id="sub_succession_number" name="sub_succession_number" required><br><br>
+
+    <label for="seed_source_id">Seed Source ID:</label><br>
+    <input type="text" id="seed_source_id" name="seed_source_id" required><br><br>
+
+    <label for="grower_id">Grower ID:</label><br>
+    <input type="text" id="grower_id" name="grower_id" required><br><br>
+
+    <label for="created_at">Created At:</label><br>
+    <input type="date" id="created_at" name="created_at" required><br><br>
+
+    <label for="status">Status:</label><br>
+    <input type="text" id="status" name="status" required><br><br>
+
+    <label for="expected_outcome">Expected Outcome:</label><br>
+    <input type="text" id="expected_outcome" name="expected_outcome" required><br><br>
+
+    <input type="submit" value="Add Sub Succession">
+</form>
+<a href="{{ url_for('list_sub_successions') }}" hx-get="{{ url_for('list_sub_successions') }}" hx-target="#content" hx-swap="innerHTML">Back to List</a>

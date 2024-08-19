@@ -1,0 +1,11 @@
+<h1>Trees</h1>
+<a href="{{ url_for('add_tree') }}" hx-get="{{ url_for('add_tree') }}" hx-target="#content" hx-swap="innerHTML">Add New Tree</a>
+<ul id="tree-list">
+    {% for tree in trees %}
+    <li id="tree-{{ tree._id }}">
+        <span hx-get="{{ url_for('edit_tree', id=tree._id) }}" hx-target="#content" hx-swap="innerHTML">{{ tree.species }}</span>
+        <button hx-delete="{{ url_for('delete_tree', id=tree._id) }}" hx-target="#tree-{{ tree._id }}" hx-swap="outerHTML">Delete</button>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('index') }}" hx-get="{{ url_for('index') }}" hx-target="#content" hx-swap="innerHTML">Back to Home</a>

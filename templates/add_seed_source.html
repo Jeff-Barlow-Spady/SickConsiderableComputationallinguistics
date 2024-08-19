@@ -1,0 +1,38 @@
+<h1>Add Seed Source</h1>
+<form hx-post="{{ url_for('add_seed_source') }}" hx-target="#seed-source-list" hx-swap="beforeend">
+    <label for="succession_number">Succession Number:</label><br>
+    <input type="text" id="succession_number" name="succession_number" required><br><br>
+
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" required></textarea><br><br>
+
+    <label for="germination_rate">Germination Rate:</label><br>
+    <input type="text" id="germination_rate" name="germination_rate" required><br><br>
+
+    <label for="quantity">Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" required><br><br>
+
+    <label for="scarification_instructions">Scarification Instructions:</label><br>
+    <textarea id="scarification_instructions" name="scarification_instructions"></textarea><br><br>
+
+    <label for="stratification_instructions">Stratification Instructions:</label><br>
+    <textarea id="stratification_instructions" name="stratification_instructions"></textarea><br><br>
+
+    <label for="date_added">Date Added:</label><br>
+    <input type="date" id="date_added" name="date_added" required><br><br>
+
+    <label for="seeds_issued">Seeds Issued:</label><br>
+    <input type="number" id="seeds_issued" name="seeds_issued" required><br><br>
+
+    <label for="geographic_location">Geographic Location:</label><br>
+    <input type="text" id="geographic_location" name="geographic_location"><br><br>
+
+    <label for="supplier">Supplier:</label><br>
+    <input type="text" id="supplier" name="supplier"><br><br>
+
+    <label for="viability_duration">Viability Duration:</label><br>
+    <input type="text" id="viability_duration" name="viability_duration"><br><br>
+
+    <input type="submit" value="Add Seed Source">
+</form>
+<a href="{{ url_for('list_seed_sources') }}" hx-get="{{ url_for('list_seed_sources') }}" hx-target="#content" hx-swap="innerHTML">Back to List</a>

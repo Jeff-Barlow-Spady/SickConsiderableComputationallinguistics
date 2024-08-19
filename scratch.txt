@@ -1,0 +1,1 @@
+export MONGODB_URL="mongodb+srv://jeffbarlowspady:f5nlDfzrROpHOcAg@longtrees.j3weklg.mongodb.net/"

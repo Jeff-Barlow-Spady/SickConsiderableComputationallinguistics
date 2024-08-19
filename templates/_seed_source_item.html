@@ -1,0 +1,4 @@
+<li id="seed-source-{{ seed_source._id }}">
+    <span hx-get="{{ url_for('edit_seed_source', id=seed_source._id) }}" hx-target="#content" hx-swap="innerHTML">{{ seed_source.succession_number }}</span>
+    <button hx-delete="{{ url_for('delete_seed_source', id=seed_source._id) }}" hx-target="#seed-source-{{ seed_source._id }}" hx-swap="outerHTML">Delete</button>
+</li>

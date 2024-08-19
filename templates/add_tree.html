@@ -1,0 +1,29 @@
+<h1>Add Tree</h1>
+<form hx-post="{{ url_for('add_tree') }}" hx-target="#tree-list" hx-swap="beforeend">
+    <label for="species">Species:</label><br>
+    <input type="text" id="species" name="species" required><br><br>
+
+    <label for="sub_succession_id">Sub Succession ID:</label><br>
+    <input type="text" id="sub_succession_id" name="sub_succession_id" required><br><br>
+
+    <label for="growth_stage">Growth Stage:</label><br>
+    <input type="text" id="growth_stage" name="growth_stage" required><br><br>
+
+    <label for="planted_at">Planted At:</label><br>
+    <input type="date" id="planted_at" name="planted_at" required><br><br>
+
+    <label for="height">Height (cm):</label><br>
+    <input type="number" id="height" name="height" required><br><br>
+
+    <label for="health_status">Health Status:</label><br>
+    <input type="text" id="health_status" name="health_status" required><br><br>
+
+    <label for="yield_data">Yield Data:</label><br>
+    <input type="text" id="yield_data" name="yield_data"><br><br>
+
+    <label for="notes">Notes:</label><br>
+    <textarea id="notes" name="notes"></textarea><br><br>
+
+    <input type="submit" value="Add Tree">
+</form>
+<a href="{{ url_for('list_trees') }}" hx-get="{{ url_for('list_trees') }}" hx-target="#content" hx-swap="innerHTML">Back to List</a>

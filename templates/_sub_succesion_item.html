@@ -1,0 +1,4 @@
+<li id="sub-succession-{{ sub_succession._id }}">
+    <span hx-get="{{ url_for('edit_sub_succession', id=sub_succession._id) }}" hx-target="#content" hx-swap="innerHTML">{{ sub_succession.sub_succession_number }}</span>
+    <button hx-delete="{{ url_for('delete_sub_succession', id=sub_succession._id) }}" hx-target="#sub-succession-{{ sub_succession._id }}" hx-swap="outerHTML">Delete</button>
+</li>

@@ -1,0 +1,23 @@
+<h1>Add Grower</h1>
+<form hx-post="{{ url_for('add_grower') }}" hx-target="#grower-list" hx-swap="beforeend">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="contact_info">Contact Info:</label><br>
+    <input type="text" id="contact_info" name="contact_info" required><br><br>
+
+    <label for="joined_at">Joined At:</label><br>
+    <input type="date" id="joined_at" name="joined_at" required><br><br>
+
+    <label for="address">Address:</label><br>
+    <input type="text" id="address" name="address" required><br><br>
+
+    <label for="latitude">Latitude:</label><br>
+    <input type="text" id="latitude" name="latitude" required><br><br>
+
+    <label for="longitude">Longitude:</label><br>
+    <input type="text" id="longitude" name="longitude" required><br><br>
+
+    <input type="submit" value="Add Grower">
+</form>
+<a href="{{ url_for('list_growers') }}" hx-get="{{ url_for('list_growers') }}" hx-target="#content" hx-swap="innerHTML">Back to List</a>

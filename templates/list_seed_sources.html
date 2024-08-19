@@ -1,0 +1,11 @@
+<h1>Seed Sources</h1>
+<a href="{{ url_for('add_seed_source') }}" hx-get="{{ url_for('add_seed_source') }}" hx-target="#content" hx-swap="innerHTML">Add New Seed Source</a>
+<ul id="seed-source-list">
+    {% for seed_source in seed_sources %}
+    <li id="seed-source-{{ seed_source._id }}">
+        <span hx-get="{{ url_for('edit_seed_source', id=seed_source._id) }}" hx-target="#content" hx-swap="innerHTML">{{ seed_source.succession_number }}</span>
+        <button hx-delete="{{ url_for('delete_seed_source', id=seed_source._id) }}" hx-target="#seed-source-{{ seed_source._id }}" hx-swap="outerHTML">Delete</button>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('index') }}" hx-get="{{ url_for('index') }}" hx-target="#content" hx-swap="innerHTML">Back to Home</a>
